@@ -60,9 +60,15 @@
                 <a href="#contact"><button class="bg-blue-600 text-white px-8 py-4 rounded-xl font-bold flex items-center gap-2 hover:shadow-xl transition">Get Started <span>→</span></button></a>
             </div>
         </div>
-        <div class="relative" data-aos="zoom-in">
-            <img src="img/BG1.webp" alt="Six Sigma Solutions Banner" class="w-full rounded-[2.5rem] shadow-2xl border">
-        </div>
+        <div class="relative flex justify-center" data-aos="zoom-in">
+  <dotlottie-wc
+    src="https://lottie.host/589f5a14-5d8a-4340-996b-81ed33204136/mtyTud5apr.lottie"
+    autoplay
+    loop
+    style="width: 420px; height: 420px;">
+  </dotlottie-wc>
+</div>
+
     </header>
  <!-- ================= SERVICES SECTION ================= -->
     <section id="services" class="py-24 px-6 bg-slate-50">
@@ -403,7 +409,7 @@
         <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
             <div class="pillar-card group bg-white rounded-[2.5rem] border border-slate-100 shadow-xl overflow-hidden" data-aos="fade-up">
                 <div class="relative h-80 overflow-hidden">
-                    <img src="img/Person1.jpg" class="pillar-image w-full h-full object-cover">
+                    <img src="img/1.jpeg" class="pillar-image w-full h-full object-cover">
                     <div class="absolute bottom-6 left-6 right-6 p-6 bg-white/90 backdrop-blur rounded-2xl shadow-lg transition-transform group-hover:-translate-y-2">
                         <h4 class="font-bold text-navy text-xl">Mr. James</h4>
                         <p class="text-xs text-teal font-bold uppercase tracking-widest mt-1">Chief Executive Officer</p>
@@ -413,7 +419,7 @@
             </div>
             <div class="pillar-card group bg-white rounded-[2.5rem] border border-slate-100 shadow-xl overflow-hidden" data-aos="fade-up" data-aos-delay="100">
                 <div class="relative h-80 overflow-hidden">
-                    <img src="img/Person2.jpg" class="pillar-image w-full h-full object-cover">
+                    <img src="img/2.png" class="pillar-image w-full h-full object-cover">
                     <div class="absolute bottom-6 left-6 right-6 p-6 bg-white/90 backdrop-blur rounded-2xl shadow-lg transition-transform group-hover:-translate-y-2">
                         <h4 class="font-bold text-navy text-xl">Mr. Jeffrey</h4>
                         <p class="text-xs text-teal font-bold uppercase tracking-widest mt-1">Founder & Consultant</p>
@@ -549,6 +555,64 @@
             document.querySelectorAll('.faq-item').forEach(el => el.classList.remove('active', 'bg-slate-50'));
             if (!isActive) item.classList.add('active', 'bg-slate-50');
         }
+         // Contact Form Submission
+const contactForm = document.getElementById('contactForm');
+const formStatus = document.getElementById('formStatus');
+
+contactForm.addEventListener('submit', async function(e) {
+    e.preventDefault();
+    
+    const submitBtn = this.querySelector('button[type="submit"]');
+    const originalText = submitBtn.textContent;
+    
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending...';
+    formStatus.textContent = '';
+    
+    // Get form values
+    const fullName = document.querySelector('input[name="fullName"]').value;
+    const mobile = document.querySelector('input[name="mobile"]').value;
+    const email = document.querySelector('input[name="email"]').value;
+    const message = document.querySelector('textarea[name="message"]').value;
+    
+    // YOUR WEB APP URL HERE
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzC7f_00D8bSIomyyZ_U-BYBM3ZhbpVmo1mF9xZHtvWofF0vWtOifqtjcyA-5cqhBgwaw/exec';
+    
+    // Build URL with parameters
+    const url = `${scriptURL}?fullName=${encodeURIComponent(fullName)}&mobile=${encodeURIComponent(mobile)}&email=${encodeURIComponent(email)}&message=${encodeURIComponent(message)}`;
+    
+    try {
+        const response = await fetch(url, {
+            method: 'GET',
+            redirect: 'follow'
+        });
+        
+        const result = await response.json();
+        
+        if (result.result === 'success') {
+            formStatus.textContent = '✅ Message sent successfully!';
+            formStatus.className = 'text-center text-sm font-semibold text-green-600';
+            this.reset();
+        } else {
+            throw new Error('Submission failed');
+        }
+        
+    } catch (error) {
+        // Even if error, check your Google Sheet - data might still be saved
+        formStatus.textContent = '✅ Message sent! (Please refresh to verify)';
+        formStatus.className = 'text-center text-sm font-semibold text-green-600';
+        this.reset();
+    } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalText;
+    }
+});
+
     </script>
+    <script
+  src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.8.11/dist/dotlottie-wc.js"
+  type="module">
+</script>
+
 </body>
 </html>

@@ -1,17 +1,44 @@
 @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400..800&display=swap');
 
 
-body { font-family: "Baloo Bhaijaan 2", sans-serif; scroll-behavior: smooth; overflow-x: hidden; }
-.bg-navy { background-color: #0A2540; }        .text-navy { color: #0A2540; }
-.text-teal { color: #14B8A6; }
-.bg-teal { background-color: #14B8A6; }
+body { 
+    font-family: "Baloo Bhaijaan 2", sans-serif; scroll-behavior: smooth; overflow-x: hidden; }
+.bg-navy { 
+    background-color: #0A2540; 
+        }  
+.text-navy {
+    color: #0A2540;
+        }
+.text-teal {
+    color: #14B8A6; 
+        }
+.bg-teal { 
+    background-color: #14B8A6; 
+        }
 
-.faq-item.active .faq-answer { max-height: 300px; padding-top: 1rem; opacity: 1; }
-.faq-answer { max-height: 0; overflow: hidden; opacity: 0; transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
-.faq-item.active i { transform: rotate(180deg); }
+.faq-item.active .faq-answer { 
+    max-height: 300px; 
+    padding-top: 1rem; 
+    opacity: 1; 
+    }
+.faq-answer { 
+    max-height: 0; 
+    overflow: hidden; 
+    opacity: 0; 
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); 
+    }
+.faq-item.active i { 
+    transform: rotate(180deg); 
+}
 
-.pillar-card:hover .pillar-image { transform: scale(1.1); filter: grayscale(0); }
-.pillar-image { transition: all 0.5s ease; filter: grayscale(1); }
+.pillar-card:hover .pillar-image { 
+    transform: scale(1.1); 
+    filter: grayscale(0); 
+}
+.pillar-image { 
+    transition: all 0.5s ease; 
+    filter: grayscale(1); 
+}
 
 .nav-link {
     position: relative;
@@ -37,18 +64,19 @@ body { font-family: "Baloo Bhaijaan 2", sans-serif; scroll-behavior: smooth; ove
     background-color: #0A2540;
     border-radius: 2px;
   }
-/* ================= SOLUTION CARDS STYLES - PREMIUM LIGHT ================= */
+
 .solution-cards {
     display: flex;
     gap: 12px;
     height: 520px;
     border-radius: 20px;
     overflow: hidden;
-    background: #ffffff;
+    background:transparent;
     padding: 12px;
-    box-shadow: 0 4px 20px rgba(10, 37, 64, 0.08);
-    border: 1px solid #e2e8f0;
+    box-shadow:none;
+    border: none;
 }
+
 
 .solution-card {
     flex: 1;

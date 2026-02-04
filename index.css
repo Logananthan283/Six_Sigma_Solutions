@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+body { font-family: 'Poppins', sans-serif; scroll-behavior: smooth; overflow-x: hidden; }
+.bg-navy { background-color: #0A2540; }        .text-navy { color: #0A2540; }
+.text-teal { color: #14B8A6; }
+.bg-teal { background-color: #14B8A6; }
+        
+.faq-item.active .faq-answer { max-height: 300px; padding-top: 1rem; opacity: 1; }
+.faq-answer { max-height: 0; overflow: hidden; opacity: 0; transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+.faq-item.active i { transform: rotate(180deg); }
+
+.pillar-card:hover .pillar-image { transform: scale(1.1); filter: grayscale(0); }
+.pillar-image { transition: all 0.5s ease; filter: grayscale(1); }

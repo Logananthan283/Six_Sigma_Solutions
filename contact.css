@@ -1,0 +1,27 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* Brand */
+.bg-navy { background-color: #0A2540; }
+.text-navy { color: #0A2540; }
+.text-teal { color: #14B8A6; }
+
+/* Prevent layout shift */
+.input-wrapper {
+  position: relative;
+  min-height: 64px;
+}
+
+/* Tooltip animation */
+@keyframes tooltipSlide {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Button rendering fix */
+button[type="submit"] {
+  appearance: none;
+  -webkit-appearance: none;
+}

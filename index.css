@@ -65,77 +65,91 @@ body {
     border-radius: 2px;
   }
 
+/* ===============================
+   SERVICES – EXPANDABLE CARDS
+   FINAL PRODUCTION VERSION
+================================ */
+
+/* Container */
 .solution-cards {
     display: flex;
     gap: 12px;
     height: 520px;
     border-radius: 20px;
     overflow: hidden;
-    background:transparent;
+    background: transparent;
     padding: 12px;
-    box-shadow:none;
+    box-shadow: none;
     border: none;
 }
 
-
+/* Card Base */
 .solution-card {
     flex: 1;
     position: relative;
     overflow: hidden;
     cursor: pointer;
-    border-radius: 12px;
+    border-radius: 16px;
     transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-    background: #f8fafc;
+
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
 }
 
-/* Professional Color Borders - Light Theme */
-.solution-card[data-gradient="blue"] {
-    border: 2px solid #3b82f6;
-    background: linear-gradient(180deg, #f0f9ff 0%, #dbeafe 100%);
+/* Subtle Color Accent Strip */
+.solution-card::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 3px;
+    height: 100%;
+    border-radius: 16px 0 0 16px;
+    z-index: 3;
+    opacity: 0.6;
 }
 
-.solution-card[data-gradient="purple"] {
-    border: 2px solid #8b5cf6;
-    background: linear-gradient(180deg, #faf5ff 0%, #ede9fe 100%);
+/* Accent Colors */
+.solution-card[data-gradient="blue"]::before {
+    background: #3b82f6;
 }
 
-.solution-card[data-gradient="teal"] {
-    border: 2px solid #14b8a6;
-    background: linear-gradient(180deg, #f0fdfa 0%, #ccfbf1 100%);
+.solution-card[data-gradient="purple"]::before {
+    background: #8b5cf6;
 }
 
-.solution-card[data-gradient="navy"] {
-    border: 2px solid #0A2540;
-    background: linear-gradient(180deg, #f1f5f9 0%, #e0e7ff 100%);
+.solution-card[data-gradient="teal"]::before {
+    background: #14b8a6;
 }
 
-.solution-card[data-gradient="slate"] {
-    border: 2px solid #64748b;
-    background: linear-gradient(180deg, #f8fafc 0%, #e2e8f0 100%);
+.solution-card[data-gradient="navy"]::before {
+    background: #0A2540;
 }
 
+.solution-card[data-gradient="slate"]::before {
+    background: #64748b;
+}
+
+/* Hover Expansion */
 .solution-card:hover {
     flex: 5;
-    box-shadow: 0 8px 30px rgba(10, 37, 64, 0.12);
     transform: translateY(-2px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
 }
 
-/* Background Image */
+/* Background Image Effect */
 .card-bg {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    inset: 0;
     background-size: cover;
     background-position: center;
-    filter: blur(20px) brightness(1.1) opacity(0.15);
+    filter: blur(18px) brightness(1.05) opacity(0.15);
     transition: all 0.6s ease;
     z-index: 1;
 }
 
 .solution-card:hover .card-bg {
-    filter: blur(0px) brightness(1) opacity(0.25);
+    filter: blur(0) brightness(1) opacity(0.22);
 }
 
 /* Content */
@@ -151,26 +165,12 @@ body {
     text-align: center;
 }
 
-/* Title Styling Based on Card Type */
-.solution-card[data-gradient="blue"] .card-content h3 {
-    color: #1e40af;
-}
-
-.solution-card[data-gradient="purple"] .card-content h3 {
-    color: #6d28d9;
-}
-
-.solution-card[data-gradient="teal"] .card-content h3 {
-    color: #0f766e;
-}
-
-.solution-card[data-gradient="navy"] .card-content h3 {
-    color: #0A2540;
-}
-
-.solution-card[data-gradient="slate"] .card-content h3 {
-    color: #334155;
-}
+/* Title Colors */
+.solution-card[data-gradient="blue"] .card-content h3 { color: #1e40af; }
+.solution-card[data-gradient="purple"] .card-content h3 { color: #6d28d9; }
+.solution-card[data-gradient="teal"] .card-content h3 { color: #0f766e; }
+.solution-card[data-gradient="navy"] .card-content h3 { color: #0A2540; }
+.solution-card[data-gradient="slate"] .card-content h3 { color: #334155; }
 
 /* Title */
 .card-content h3 {
@@ -211,52 +211,7 @@ body {
     max-height: 200px;
 }
 
-/* Learn More Button - Color Matched */
-.solution-card[data-gradient="blue"] .learn-more-btn {
-    background: #3b82f6;
-    color: #ffffff;
-}
-
-.solution-card[data-gradient="blue"] .learn-more-btn:hover {
-    background: #2563eb;
-}
-
-.solution-card[data-gradient="purple"] .learn-more-btn {
-    background: #8b5cf6;
-    color: #ffffff;
-}
-
-.solution-card[data-gradient="purple"] .learn-more-btn:hover {
-    background: #7c3aed;
-}
-
-.solution-card[data-gradient="teal"] .learn-more-btn {
-    background: #14b8a6;
-    color: #ffffff;
-}
-
-.solution-card[data-gradient="teal"] .learn-more-btn:hover {
-    background: #0d9488;
-}
-
-.solution-card[data-gradient="navy"] .learn-more-btn {
-    background: #0A2540;
-    color: #ffffff;
-}
-
-.solution-card[data-gradient="navy"] .learn-more-btn:hover {
-    background: #1e3a5f;
-}
-
-.solution-card[data-gradient="slate"] .learn-more-btn {
-    background: #475569;
-    color: #ffffff;
-}
-
-.solution-card[data-gradient="slate"] .learn-more-btn:hover {
-    background: #334155;
-}
-
+/* Learn More Button */
 .learn-more-btn {
     display: inline-flex;
     align-items: center;
@@ -271,7 +226,7 @@ body {
     opacity: 0;
     transform: translateY(20px);
     transition: all 0.4s ease;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    color: #ffffff;
 }
 
 .solution-card:hover .learn-more-btn {
@@ -279,11 +234,18 @@ body {
     transform: translateY(0);
 }
 
+/* Button Colors */
+.solution-card[data-gradient="blue"] .learn-more-btn { background: #3b82f6; }
+.solution-card[data-gradient="purple"] .learn-more-btn { background: #8b5cf6; }
+.solution-card[data-gradient="teal"] .learn-more-btn { background: #14b8a6; }
+.solution-card[data-gradient="navy"] .learn-more-btn { background: #0A2540; }
+.solution-card[data-gradient="slate"] .learn-more-btn { background: #475569; }
+
 .learn-more-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
 }
 
+/* Button Icon */
 .learn-more-btn .btn-icon {
     width: 18px;
     height: 18px;
@@ -294,7 +256,9 @@ body {
     transform: translateX(4px);
 }
 
-/* Responsive Design */
+/* ===============================
+   RESPONSIVE
+================================ */
 @media (max-width: 1024px) {
     .solution-cards {
         flex-direction: column;
@@ -348,5 +312,3 @@ body {
         font-size: 0.85rem;
     }
 }
-
-

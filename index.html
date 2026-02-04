@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Six Sigma Solutions | Professional IT Solutions</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400..800&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/lottie-web/build/player/lottie.min.js"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
@@ -22,7 +24,7 @@
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
             <div class="flex items-center gap-2">
                 <div class="w-10 h-10  flex items-center justify-center rounded ">
-                   <a href="#home"> <img src="img/Six Sigma logo.png" alt="Six Sigma Solutions Logo" >
+                   <a href="#home"> <img src="img/Six Sigma logo.png" alt="Six Sigma Solutions Logo" ></a>
                 </div>
                 <span class="font-bold text-navy tracking-tight uppercase">Six Sigma Solutions</span></a>
             </div>
@@ -33,7 +35,7 @@
                 <a href="#faq" class="nav-link">FAQ</a>
                 <a href="contact.html" class="nav-link">Contact</a>
             </div>
-            <a href="contact.html"><button class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg text-sm font-bold transition">Get Started</button></a>
+            <a href="contact.html"><button class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg text-sm font-bold transition">Contact Us</button></a>
         </div>
     </nav>
 <!-- ================= HERO SECTION ================= -->
@@ -75,43 +77,89 @@
 
 </header>
 
- <!-- ================= SERVICES SECTION ================= -->
+    <!-- ================= SERVICES SECTION ================= -->
     <section id="services" class="py-24 px-6 bg-slate-50">
         <div class="max-w-7xl mx-auto">
             <div class="mb-16 text-center lg:text-left" data-aos="fade-up">
                 <h2 class="text-4xl font-bold text-navy mb-4">Our Core Solutions</h2>
-                <p class="text-slate-500 max-w-2xl">Achieve operational excellence through the data-driven precision of Six Sigma Solutions.</p>
+                <p class="text-slate-500 max-w-2xl">Achieve operational excellence through innovative technology solutions and digital transformation.</p>
             </div>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="p-10 bg-white rounded-3xl shadow-sm hover:shadow-2xl transition-all group" data-aos="fade-up" data-aos-delay="100">
-                    <div class="w-14 h-14 bg-pink-100 text-pink-500 rounded-2xl mb-8 flex items-center justify-center group-hover:bg-pink-500 group-hover:text-white transition-colors"><i data-lucide="bar-chart-3"></i></div>
-                    <h3 class="font-bold text-navy mb-4 text-xl">Six Sigma Consulting</h3>
-                    <p class="text-sm text-slate-500 mb-8 leading-relaxed">Systematically eliminate defects and reduce variability using professional DMAIC frameworks.</p>
-                    <a href="#" class="text-pink-500 font-bold flex items-center gap-2">Learn More <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+
+            <!-- New Expandable Cards -->
+            <div class="solution-cards" data-aos="fade-up" data-aos-delay="100">
+
+                <!-- Web Development -->
+                <div class="solution-card" data-gradient="blue">
+                    <div class="card-bg" style="background-image: url('https://images.unsplash.com/photo-1547658719-da2b51169166?w=800&q=80');"></div>
+                    <div class="card-content">
+                        <h3>Web Development</h3>
+                        <p>Custom web applications built with modern frameworks and scalable architecture for optimal performance and user experience.</p>
+                        <a href="#" class="learn-more-btn">
+                            Learn More
+                            <i data-lucide="arrow-right" class="btn-icon"></i>
+                        </a>
+                    </div>
                 </div>
-                <div class="p-10 bg-white rounded-3xl shadow-sm hover:shadow-2xl transition-all group" data-aos="fade-up" data-aos-delay="200">
-                    <div class="w-14 h-14 bg-teal-100 text-teal-600 rounded-2xl mb-8 flex items-center justify-center group-hover:bg-teal group-hover:text-white transition-colors"><i data-lucide="graduation-cap"></i></div>
-                    <h3 class="font-bold text-navy mb-4 text-xl">Corporate Training</h3>
-                    <p class="text-sm text-slate-500 mb-8 leading-relaxed">Equip your workforce with globally recognized certifications, from White Belt to Master Black Belt.</p>
-                    <a href="#" class="text-teal font-bold flex items-center gap-2">Learn More <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+
+                <!-- Mobile App Development -->
+                <div class="solution-card" data-gradient="purple">
+                    <div class="card-bg" style="background-image: url('https://images.unsplash.com/photo-1551650975-87deedd944c3?w=800&q=80');"></div>
+                    <div class="card-content">
+                        <h3>Mobile Apps</h3>
+                        <p>Native and cross-platform mobile applications designed for seamless user experiences across all devices and platforms.</p>
+                        <a href="#" class="learn-more-btn">
+                            Learn More
+                            <i data-lucide="arrow-right" class="btn-icon"></i>
+                        </a>
+                    </div>
                 </div>
-                <div class="p-10 bg-white rounded-3xl shadow-sm hover:shadow-2xl transition-all group" data-aos="fade-up" data-aos-delay="300">
-                    <div class="w-14 h-14 bg-blue-100 text-blue-600 rounded-2xl mb-8 flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-colors"><i data-lucide="cpu"></i></div>
-                    <h3 class="font-bold text-navy mb-4 text-xl">IT & Digital Solutions</h3>
-                    <p class="text-sm text-slate-500 mb-8 leading-relaxed">Customized process automation and digital dashboarding designed specifically for Six Sigma Solution frameworks.</p>
-                    <a href="#" class="text-blue-600 font-bold flex items-center gap-2">Learn More <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+
+                <!-- AI Agents -->
+                <div class="solution-card" data-gradient="teal">
+                    <div class="card-bg" style="background-image: url('https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&q=80');"></div>
+                    <div class="card-content">
+                        <h3>AI Agents</h3>
+                        <p>Intelligent automation solutions powered by machine learning to streamline operations and enhance decision-making processes.</p>
+                        <a href="#" class="learn-more-btn">
+                            Learn More
+                            <i data-lucide="arrow-right" class="btn-icon"></i>
+                        </a>
+                    </div>
                 </div>
-                <div class="p-10 bg-white rounded-3xl shadow-sm hover:shadow-2xl transition-all group" data-aos="fade-up" data-aos-delay="400">
-                    <div class="w-14 h-14 bg-yellow-100 text-yellow-600 rounded-2xl mb-8 flex items-center justify-center group-hover:bg-yellow-500 group-hover:text-white transition-colors"><i data-lucide="users"></i></div>
-                    <h3 class="font-bold text-navy mb-4 text-xl">Internship Programs</h3>
-                    <p class="text-sm text-slate-500 mb-8 leading-relaxed">Nurture the next generation of quality leaders with hands-on projects in real-world business environments.</p>
-                    <a href="#" class="text-yellow-600 font-bold flex items-center gap-2">Learn More <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+
+                <!-- Web Design -->
+                <div class="solution-card" data-gradient="navy">
+                    <div class="card-bg" style="background-image: url('https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&q=80');"></div>
+                    <div class="card-content">
+                        <h3>Web Design</h3>
+                        <p>Beautiful, conversion-focused designs that combine aesthetics with functionality and strong brand identity.</p>
+                        <a href="#" class="learn-more-btn">
+                            Learn More
+                            <i data-lucide="arrow-right" class="btn-icon"></i>
+                        </a>
+                    </div>
                 </div>
+
+                <!-- Digital Marketing -->
+                <div class="solution-card" data-gradient="slate">
+                    <div class="card-bg" style="background-image: url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80');"></div>
+                    <div class="card-content">
+                        <h3>Digital Marketing</h3>
+                        <p>Data-driven marketing strategies that boost online presence and drive measurable business growth and ROI.</p>
+                        <a href="#" class="learn-more-btn">
+                            Learn More
+                            <i data-lucide="arrow-right" class="btn-icon"></i>
+                        </a>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
 
-<!-- ================= ABOUT US SECTION ================= -->
+
+
+    <!-- ================= ABOUT US SECTION ================= -->
     <section id="about" class="py-24 px-6 max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-center">
         <div class="relative" data-aos="fade-right">
             <img src="img/BG2.webp" alt="About Six Sigma Solutions" class="w-full rounded-[2.5rem] shadow-2xl border">
@@ -379,7 +427,7 @@
       <div class="relative w-32 h-32 mx-auto mb-6">
         <img
           src="img/1.jpeg"
-          alt="Mr. James"
+          alt="Dr.V.Cheallapondy "
           onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
           class="w-32 h-32 rounded-full object-cover object-top shadow-md"
         >
@@ -393,7 +441,7 @@
         </div>
       </div>
 
-      <h4 class="font-bold text-navy text-lg">Mr. James</h4>
+      <h4 class="font-bold text-navy text-lg">Dr. V. Cheallapondy </h4>
       <p class="text-xs text-teal font-bold uppercase tracking-widest mt-1">
         Chief Executive Officer
       </p>
@@ -408,7 +456,7 @@
       <div class="relative w-32 h-32 mx-auto mb-6">
         <img
           src="img/2.png"
-          alt="Mr. Jeffrey"
+          alt="Mr. S. Vasu"
           onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
           class="w-32 h-32 rounded-full object-cover object-top shadow-md"
         >
@@ -421,7 +469,7 @@
         </div>
       </div>
 
-      <h4 class="font-bold text-navy text-lg">Mr. Jeffrey</h4>
+      <h4 class="font-bold text-navy text-lg">Mr. S. Vasu</h4>
       <p class="text-xs text-teal font-bold uppercase tracking-widest mt-1">
         Founder & Consultant
       </p>
@@ -518,8 +566,8 @@
   <ul class="space-y-5 text-sm text-slate-400">
     <li class="flex items-center gap-4">
       <i data-lucide="phone" class="w-4 h-4 text-teal"></i>
-      <a href="tel:+919876543210" class="hover:text-white transition">
-        +91 98765 43210
+      <a href="tel:+919884590009" class="hover:text-white transition">
+        +91 9884590009
       </a>
     </li>
 
@@ -529,6 +577,13 @@
         Six Sigma Solutions
       </a>
     </li>
+      <li class="flex  gap-4">
+          <i data-lucide="map-pinned" class="w-7 h-7 text-teal"></i>
+          <a href="https://maps.app.goo.gl/NM5TXdMvArg4puxQ7" class="hover:text-white transition">
+              Six Sigma Solutions <br>
+              NKC Towers 1 st Floor,<br> opp Govt. Engineering College Kottagoundampatti, Salem, <br>Tamil Nadu - 636011, India.
+          </a>
+      </li>
   </ul>
 </div>
 

@@ -237,21 +237,31 @@
         <div class="lg:col-span-2 p-12 bg-white border border-slate-200 rounded-[2rem] shadow-xl" data-aos="fade-right">
             <h2 class="text-3xl font-bold text-navy mb-4">Let's Build Something Amazing</h2>
             <p class="text-slate-500 mb-12">Ready to optimize your business? Reach out to Six Sigma Solutions today.</p>
-            <form class="space-y-8">
+
+            <!-- ✅ Added id="contactForm" -->
+            <form id="contactForm" class="space-y-8">
                 <div class="grid md:grid-cols-2 gap-8">
-                    <input type="text" placeholder="Full Name" class="w-full border-b-2 border-slate-100 py-4 focus:border-teal outline-none transition-colors">
-                    <input type="text" placeholder="Mobile Number" class="w-full border-b-2 border-slate-100 py-4 focus:border-teal outline-none transition-colors">
+                    <!-- ✅ Added name="fullName" and required -->
+                    <input type="text" name="fullName" placeholder="Full Name" required class="w-full border-b-2 border-slate-100 py-4 focus:border-teal outline-none transition-colors">
+                    <!-- ✅ Added name="mobile" and required -->
+                    <input type="tel" name="mobile" placeholder="Mobile Number" required class="w-full border-b-2 border-slate-100 py-4 focus:border-teal outline-none transition-colors">
                 </div>
-                <input type="email" placeholder="Email Address" class="w-full border-b-2 border-slate-100 py-4 focus:border-teal outline-none transition-colors">
-                <textarea placeholder="Tell us about your project" rows="3" class="w-full border-b-2 border-slate-100 py-4 focus:border-teal outline-none transition-colors"></textarea>
-                <button class="w-full bg-teal text-white py-5 rounded-xl font-bold text-lg shadow-lg hover:bg-teal-600 transition transform hover:scale-[1.02]">Send Message</button>
+                <!-- ✅ Added name="email" and required -->
+                <input type="email" name="email" placeholder="Email Address" required class="w-full border-b-2 border-slate-100 py-4 focus:border-teal outline-none transition-colors">
+                <!-- ✅ Added name="message" and required -->
+                <textarea name="message" placeholder="Tell us about your project" rows="3" required class="w-full border-b-2 border-slate-100 py-4 focus:border-teal outline-none transition-colors"></textarea>
+                <!-- ✅ Added type="submit" -->
+                <button type="submit" class="w-full bg-teal text-white py-5 rounded-xl font-bold text-lg shadow-lg hover:bg-teal-600 transition transform hover:scale-[1.02]">Send Message</button>
+                <!-- ✅ Added id="formStatus" for success/error messages -->
+                <p id="formStatus" class="text-center text-sm font-semibold"></p>
             </form>
+
         </div>
         <div class="space-y-8" data-aos="fade-left">
             <div class="p-8 bg-navy text-white rounded-[2rem] shadow-2xl">
                 <h4 class="text-2xl font-bold mb-8">Direct Access</h4>
                 <div class="space-y-8">
-                    <a href="https://wa.me/919876543210" target="_blank"class="flex items-center gap-5 hover:opacity-90 transition">
+                    <a href="https://wa.me/919876543210" target="_blank" class="flex items-center gap-5 hover:opacity-90 transition">
                         <div class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center">
                             <i data-lucide="phone" class="text-teal"></i>
                         </div>
@@ -260,7 +270,7 @@
                             <p class="font-bold">+91 98765 43210</p>
                         </div>
                     </a>
-                    <a href="mailto:info@sixsigma.com"class="flex items-center gap-5 hover:opacity-90 transition">
+                    <a href="mailto:info@sixsigma.com" class="flex items-center gap-5 hover:opacity-90 transition">
                         <div class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center">
                             <i data-lucide="mail" class="text-teal"></i>
                         </div>
@@ -277,7 +287,8 @@
         </div>
     </section>
 
-<!-- ================= FAQ SECTION ================= --> 
+
+    <!-- ================= FAQ SECTION ================= -->
     <section id="faq" class="py-24 px-6 max-w-4xl mx-auto">
         <h2 class="text-4xl font-bold text-navy text-center mb-16" data-aos="fade-down">Frequently Asked Questions</h2>
         <div class="space-y-4">

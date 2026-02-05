@@ -51,8 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("DOMContentLoaded", () => {
   lottie.loadAnimation({
     container: document.getElementById("hero-lottie"),
-    renderer: "svg",              // 🔥 KEY FOR SHARPNESS
-    loop: true,
+    renderer: "svg",            
     autoplay: true,
     path: "img/business.json",
     rendererSettings: {

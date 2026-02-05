@@ -312,12 +312,16 @@ body {
         font-size: 0.85rem;
     }
 }
+/* ================= SOCIAL SECTION ================= */
+
 .social-section {
-  max-width: 1200px;
-  margin: 0 auto;
+  position: relative;
 }
 
+/* Heading stays above tooltips */
 .social-heading {
+  position: relative;
+  z-index: 20;
   font-weight: 700;
   margin-bottom: 28px;
   padding-bottom: 15px;
@@ -330,17 +334,23 @@ body {
 /* Social list */
 .wrapper {
   display: flex;
+  flex-wrap: wrap;
   gap: 14px;
   list-style: none;
-  padding: 10;
-  margin: 10;
+  padding: 0;
+  margin: 0;
+
+  /* ✅ ADD THIS */
+  margin-top: 12px; /* adjust: 8px / 12px / 16px */
 }
+
 
 /* Icon base */
 .wrapper .icon {
   position: relative;
 }
 
+/* Clickable area */
 .wrapper .icon a {
   width: 48px;
   height: 48px;
@@ -361,7 +371,7 @@ body {
   transition: fill 0.3s ease;
 }
 
-/* Tooltip (neutral base) */
+/* Tooltip */
 .wrapper .tooltip {
   position: absolute;
   top: -40px;
@@ -377,6 +387,7 @@ body {
   pointer-events: none;
   white-space: nowrap;
   transition: all 0.25s ease;
+  z-index: 10;
 }
 
 .wrapper .tooltip::after {
@@ -396,25 +407,40 @@ body {
   transform: translate(-50%, -6px);
 }
 
-/* Hover effects */
+/* Lift on hover */
 .wrapper .icon a:hover {
   transform: translateY(-2px);
 }
 
-/* Brand colors on hover */
-.linkedin a:hover { background: #0077b5; border-color: #0077b5; }
-.facebook a:hover { background: #1877f2; border-color: #1877f2; }
-.twitter a:hover  { background: #000000; border-color: #000000; }
+/* Brand hover colors */
+.linkedin a:hover {
+  background: #0077b5;
+  border-color: #0077b5;
+}
+
+.facebook a:hover {
+  background: #1877f2;
+  border-color: #1877f2;
+}
+
+.twitter a:hover {
+  background: #000000;
+  border-color: #000000;
+}
 
 .instagram a:hover {
-  background: linear-gradient(45deg,
-    #f58529, #feda77, #dd2a7b,
-    #8134af, #515bd4
+  background: linear-gradient(
+    45deg,
+    #f58529,
+    #feda77,
+    #dd2a7b,
+    #8134af,
+    #515bd4
   );
   border-color: transparent;
 }
 
-/* Icon color change */
+/* Icon color on hover */
 .wrapper .icon a:hover svg {
   fill: #ffffff;
 }
